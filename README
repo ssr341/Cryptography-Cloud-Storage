@@ -1,0 +1,17 @@
+The Crypto++ package was used for this project. It was installed using the
+following command in a Linux machine:
+sudo apt-get install libcrypto++-dev libcrypto++-doc libcrypto++-utils
+
+There are three different programs, one for the client, one for the server, 
+and one for the certificate authority. The client program and source code
+should be placed in a directory called clientFiles, the server in serverFiles,
+and the certificate authority in CAFiles. These three directories should be 
+placed in another directory that also contains the utility header and source 
+files, along with the Makefile. Using the make command will compile the code
+and place the programs in their respective directories. Each program should be 
+run in a different terminal.
+
+It was originally intended to have a CA distribute the keys for the symmetric
+encryption, but the RSA encryption could not encrypt the key because it was too
+long. As a result, we assumed that the client and server have already obtained
+their keys for AES from each other using the asymmetric encryption algorithm RSA.
